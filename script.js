@@ -53,4 +53,3 @@ const setVal = (num) => {
         }
     });
 }
-console.log(document.querySelector("input[type='radio'][name='stair']:checked").value)
