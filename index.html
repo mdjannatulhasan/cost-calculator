@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="calculator">
+            <div class="calc-wrap">
+                <h3>Welchen Lift besitzen Sie?</h3>
+                <div class="stair-choice-box">
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            checked
+                            type="radio"
+                            name="stair"
+                            id="stair1">
+                        <label for="stair1">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/configurator/img/treppenlifter-configurator.png"
+                                    alt="">
+                                <p>Sitzlift</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="stair"
+                            id="stair2">
+                        <label for="stair2">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/configurator/img/plattformlift-configurator.png"
+                                    alt="">
+                                <p>Plattformlift</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="stair"
+                            id="stair3">
+                        <label for="stair3">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/configurator/img/hublift-configurator.png"
+                                    alt="">
+                                <p>Hublift</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="stair"
+                            id="stair4">
+                        <label for="stair4">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/configurator/img/other-model.png"
+                                    alt="">
+                                <p>Aufzug</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <h3>Welche Form hat ihre Treppe?</h3>
+                <div class="stair-choice-box">
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            checked
+                            type="radio"
+                            name="staircase"
+                            id="staircase1">
+                        <label for="staircase1">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/strom-rechner/img/gerade-treppe.png"
+                                    alt="">
+                                <p>Gerade Treppe</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="staircase"
+                            id="staircase2">
+                        <label for="staircase2">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/strom-rechner/img/gewinkelte-treppe.png"
+                                    alt="">
+                                <p>Gewinkelte Treppe</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="staircase"
+                            id="staircase3">
+                        <label for="staircase3">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/strom-rechner/img/u-treppe.png"
+                                    alt="">
+                                <p>U-Treppe</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="individual-checkbox">
+                        <input class="stair-choice-checkbox"
+                            type="radio"
+                            name="staircase"
+                            id="staircase4">
+                        <label for="staircase4">
+                            <div class="stair-choice">
+                                <img src="https://treppenlifter.me/plugins/strom-rechner/img/wendeltreppe.png"
+                                    alt="">
+                                <p>Wendeltreppe</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class=""
+                    style="margin-top: 40px;">
+                    <h3 class="p-title">Wie oft nutzen Sie den Lift pro Tag ca.?</p>
+                        <div class="value"
+                            style="text-align: center; font-size: 20px; font-weight: 600;">bis zu 3 mal</div>
+                        <input style="width: 100%;"
+                            oninput="calculate(this)"
+                            type="range"
+                            class="form-range"
+                            value="1"
+                            min="1"
+                            max="3"
+                            step="1"
+                            id="nutzung">
+                </div>
+                <div class=""
+                    style="margin-top: 40px;">
+                    <h3 class="p-title">Über wieviele Etagen führt der Lift?</p>
+                        <div class="value"
+                            style="text-align: center; font-size: 20px; font-weight: 600;">bis zu 3 mal</div>
+                        <input style="width: 100%;"
+                            oninput="calculate(this)"
+                            type="range"
+                            class="form-range"
+                            value="1"
+                            min="1"
+                            max="10"
+                            step="1"
+                            id="etagen">
+                </div>
+                <div style="text-align:center;margin-bottom:25px;"
+                    class="col-sm-12 col-12 col-md-12 col-lg-12">
+                    <p class="p-title">Ihr Strompreis</p>
+                    <div class="input-group"
+                        style="margin: auto;max-width: 200px;">
+                        <span class="input-group-addon input-group-text">ca.</span>
+                        <input type="number"
+                            min="1"
+                            id="strompreis"
+                            placeholder="48"
+                            class="form-control">
+                        <span class="input-group-addon input-group-text">cent/kWh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div style="min-width: 300px;"><canvas id="ctx"
+                        style="min-width: 500px;"></canvas></div>
+                <div style="min-width: 300px;"><canvas id="ctx2"
+                        style="min-width: 500px;"></canvas></div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,44 @@
+.calculator {
+	margin: 0 auto;
+}
+.stair-choice-checkbox {
+	display: none;
+}
+.stair-choice-box p {
+	text-align: center;
+	font-size: 18px;
+}
+.stair-choice {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 150px;
+	padding: 10px;
+}
+.stair-choice-box img {
+	max-width: 50px;
+	max-height: 50px;
+	margin: 0 auto;
+}
+h3 {
+	padding: 20px 0;
+}
+label .stair-choice {
+	border: 2px solid #cccccc;
+}
+.stair-choice-checkbox:checked + label .stair-choice {
+	border: 2px solid red;
+}
+.stair-choice-box {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	align-items: stretch;
+}
+.calculator {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.calc-wrap {
+	grid-column: 1 / span 2;
+}
